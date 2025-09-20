@@ -1,15 +1,33 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono ,Roboto,Lato} from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/header";
+import Footer from "@/components/footer";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
+const roboto = Roboto({
+  weight: ['400', '700'], // Select specific weights to optimize load size
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto',
+});
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const lato = Lato({
+  weight: ["400", "700"],  // choose weights you need
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lato",
+});
+
 
 export const metadata = {
   title: "Create Next App",
@@ -18,11 +36,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${lato.variable} antialiased`}
       >
-        {children}
+      <Header/>
+       <main >{children}</main> 
+      <Footer/>
       </body>
     </html>
   );
