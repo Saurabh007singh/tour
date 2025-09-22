@@ -64,7 +64,7 @@ export function Header() {
           </nav>
 
           {/* Get Started button */}
-          <button className={` h-12 rounded-sm w-40 bg-[#113A75] font-lato  hover:scale-90 transition text-[18px] hover:bg-primary-background duration-300`}>
+          <button className={`h-15 rounded-sm w-40 text-white bg-[#113A75] font-lato  hover:scale-90 transition text-[18px] hover:bg-primary-background duration-300`}>
             Get Started
           </button>
         </div>

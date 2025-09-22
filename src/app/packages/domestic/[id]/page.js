@@ -123,7 +123,7 @@ export default async function SpecificDomesticPage({ params }) {
             <span className="text-[12px] text-[#4A4A4A]">
               *Excluding Applicable Taxes
             </span>
-            <button className="p-2 bg-gradient-to-l from-blue-700 to-blue-400 mx-auto rounded-sm mt-2 w-full font-semibold font-lato">
+            <button className="p-2 text-white bg-gradient-to-l from-blue-700 to-blue-400 mx-auto rounded-sm mt-2 w-full font-semibold font-lato">
               Get Started
             </button>
             <span className="text-[15px] mt-3 text-[#4A4A4A]">
@@ -187,6 +187,39 @@ export default async function SpecificDomesticPage({ params }) {
                 alt="Trip"
                 className="w-full h-20 object-cover rounded-lg"
               />
+              <img
+                src="/images/shimla-manali-day1.avif"
+                alt="Trip"
+                className="w-full  object-cover rounded-lg"
+              />
+              <img
+                src="/images/shimla-manali-day2.avif"
+                alt="Trip"
+                className="w-full  object-cover rounded-lg"
+              />
+              <img
+                src="/images/shimla-manali-day4.avif"
+                alt="Trip"
+                className="col-span-2  object-cover rounded-lg"
+              />
+              <img
+                src="/images/shimla-manali-day5.avif"
+                alt="Trip"
+                className="w-full h-20 object-cover rounded-lg"
+              />
+              <img
+                src="/images/shimla-manali-day6.avif"
+                alt="Trip"
+                className="w-full h-20 object-cover rounded-lg"
+              />
+              <img
+                src="/images/shimla-manali-day3.avif"
+                alt="Trip"
+                className="w-full col-span-2  object-cover rounded-lg"
+              />
+            
+            
+             
             </div>
           </div>
         </div>
