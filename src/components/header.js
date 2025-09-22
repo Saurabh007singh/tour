@@ -32,8 +32,8 @@ export function Header() {
           </button>
 
           {/* Desktop: Logo */}
-          <img src="/images/logo.avif" width={170} className="hidden md:block" />
-
+          
+           <div className="flex flex-row"><img src="/images/logo2.avif" width={200} /><img src="/images/logo1.avif" width={50} /></div>
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-4 relative items-center font-lato">
             <Link href="/" className={`${atTop ? "text-white":"text-black"}`}>Home</Link>
@@ -85,10 +85,11 @@ export function Header() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center mb-4">
-            <img src="/images/logo.avif" width={100} />
+            <div className="flex flex-row"><img src="/images/logo2.avif" width={200} /><img src="/images/logo1.avif" width={50} /></div>
+            
             <button
               className="text-2xl text-gray-600"
-              onClick={() => setMobileOpen(false)}
+              onClick={() => setMobileOpen(false)}w
             >
               <FiX />
             </button>
