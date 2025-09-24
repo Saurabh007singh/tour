@@ -1,4 +1,5 @@
 import { categories } from "@/const/const";
+import Link from "next/link";
 
 
 export default function Categories(){
@@ -11,11 +12,11 @@ export default function Categories(){
       <button className="h-12 rounded-sm w-40 bg-[#113A75] font-lato text-white mt-auto hover:scale-90 transition text-[18px] hover:bg-[#113A75]-background duration-300">View All</button>
     </div>
     <div className="flex flex-wrap justify-center lg:justify-between gap-6">
-  {categories.map((category) => (
-    <div key={category.id} className="flex flex-col gap-2 items-center n w-full sm:w-auto">
+  {categories.map((category) => (<Link href={category.path} key={category.id} ><div  className="flex flex-col gap-2 items-center n w-full sm:w-auto cursor-pointer">
       <img src={category.image} className="rounded-full h-55 w-55  object-cover" />
       <h1 className="font-lato text-slate-700 text-2xl  text-center">{category.id}</h1>
-    </div>
+    </div></Link>
+    
   ))}
 </div>
   </div>)

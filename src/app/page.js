@@ -24,16 +24,16 @@ export default function Home() {
       </div>
       <div className=" w-full "><section><BannerCrousel></BannerCrousel></section>
       <section className="bg-white  mb-2 border-1 border-slate-300 rounded-md w-[99%] mx-auto py-8 px-2"><Selection></Selection></section>
-      <section className="bg-white px-2 md:px-10 py-20"><Categories></Categories></section>
-      <section className="   px-2 md:px-10 py-20 bg-[#EEF8FF] flex "><Trips></Trips></section>
-      <section className=" bg-white  px-2 md:px-10 py-20  flex "><Tour></Tour></section>
+      <section className="bg-white px-2 md:px-30 py-20"><Categories></Categories></section>
+      <section className="   px-2 md:px-30 py-20 bg-[#EEF8FF] flex "><Trips></Trips></section>
+      <section className=" bg-white  px-2 md:px-30 py-20  flex "><Tour></Tour></section>
        <section className="   py-20 bg-[#113A75] flex "><WhyChoseUs></WhyChoseUs></section>
-       <section className=" bg-white   py-20 px-2 md:px-10 flex "><Destination></Destination></section>
-        <section className=" bg-white   py-20 px-2 md:px-10 flex "><Stroies></Stroies></section>
+       <section className=" bg-white md:px-30   py-20 px-2  flex "><Destination></Destination></section>
+        <section className=" bg-white  py-20 px-2 md:px-30 flex "><Stroies></Stroies></section>
         <section className=""><HeroCTA></HeroCTA></section>
-        <section className="bg-white"><BlogSection></BlogSection></section>
+        <section className="bg-white md:px-30"><BlogSection></BlogSection></section>
          <section className="bg-white"><GallerySection></GallerySection></section>
-        <section className=" bg-white   py-20 px-2 md:px-10 flex "><FaqSection></FaqSection></section>
+        <section className=" bg-white   py-20 px-2 flex "><FaqSection></FaqSection></section>
         
         </div>
       

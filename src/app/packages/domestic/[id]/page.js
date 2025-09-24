@@ -216,7 +216,7 @@ export default async function SpecificDomesticPage({ params }) {
                 src="/images/shimla-manali-day3.avif"
                 alt="Trip"
                 className="w-full col-span-2  object-cover rounded-lg"
-              />w
+              />
             </div>
           </div>
         </div>
