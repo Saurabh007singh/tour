@@ -68,13 +68,13 @@ export function Header() {
             <div className="relative group inline-block">
               <button className={textColor}>Pages</button>
               <div className="absolute hidden group-hover:block bg-white shadow-md rounded z-10">
-                <Link href="/pages/tour-guide" className="block px-4 py-2 hover:bg-gray-100">Tour Guide</Link>
-                <Link href="/pages/faqs" className="block px-4 py-2 hover:bg-gray-100">FAQs</Link>
-                <Link href="/pages/gallery" className="block px-4 py-2 hover:bg-gray-100">Gallery</Link>
+                <Link href="/tourguide" className="block px-4 py-2 hover:bg-gray-100">Tour Guide</Link>
+                <Link href="/faq" className="block px-4 py-2 hover:bg-gray-100">FAQs</Link>
+                <Link href="/gallery" className="block px-4 py-2 hover:bg-gray-100">Gallery</Link>
               </div>
             </div>
 
-            <Link href="/blog" className={textColor}>Blog</Link>
+            <Link href="/blogs" className={textColor}>Blog</Link>
             <Link href="/contact" className={textColor}>Contact</Link>
           </nav>
 
