@@ -51,7 +51,7 @@ export default function Categories() {
       </div>
       <div className="flex flex-col items-center  w-full px-2  gap-4 md:px-40 ">
         {categories.map((cat) => (
-          <div className="w-full items-center flex flex-col gap-2 ">
+          <div key={cat.id} className="w-full items-center flex flex-col gap-2 ">
             <span className="font-lato text-[#113A75] text-2xl font-semibold">
               {cat.id}
             </span>
