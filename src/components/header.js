@@ -53,11 +53,11 @@ export function Header() {
           <nav className="hidden md:flex space-x-4 relative items-center font-lato">
             <Link href="/" className={textColor}>Home</Link>
             <Link href="/about" className={textColor}>About</Link>
-            <Link href="/packages" className={textColor}>Destinations</Link>
+            <Link href="/destinations" className={textColor}>Destinations</Link>
 
             {/* Packages Dropdown */}
             <div className="relative group inline-block">
-              <button className={textColor}>Packages</button>
+              <button className={textColor}><Link href="/packages">Packages</Link></button>
               <div className="absolute hidden group-hover:block bg-white shadow-md rounded z-10">
                 <Link href="/packages/tour" className="block px-4 py-2 hover:bg-gray-100">International</Link>
                 <Link href="/packages/details" className="block px-4 py-2 hover:bg-gray-100">Domestic</Link>
