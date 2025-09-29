@@ -37,17 +37,18 @@ export function Header() {
         <div className="max-w-8xl mx-auto h-20 px-4 py-3 flex items-center justify-between">
           {/* Mobile: Menu button */}
           <button
-            className={`${textColor} md:hidden text-2xl`}
+            className={`  ${textColor} md:hidden text-2xl`}
             onClick={() => setMobileOpen(true)}
           >
             <FiMenu />
           </button>
 
           {/* Desktop: Logo */}
-          <div className="flex flex-row  items-center ">
+          <div className="hidden md:block "><div className="flex flex-row  items-center ">
             <img src="/images/logo2.avif" width={160}   />
             <img src="/images/logo1.avif"  width={70}  />
-          </div>
+          </div></div>
+          
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-4 relative items-center font-lato">
@@ -59,8 +60,8 @@ export function Header() {
             <div className="relative group inline-block">
               <button className={textColor}><Link href="/packages">Packages</Link></button>
               <div className="absolute hidden group-hover:block bg-white shadow-md rounded z-10">
-                <Link href="/packages/tour" className="block px-4 py-2 hover:bg-gray-100">International</Link>
-                <Link href="/packages/details" className="block px-4 py-2 hover:bg-gray-100">Domestic</Link>
+                <Link href="/packages/tour" className="block px-4 py-2 text-black hover:bg-gray-100">International</Link>
+                <Link href="/packages/details" className="block px-4 py-2 text-black hover:bg-gray-100">Domestic</Link>
               </div>
             </div>
 
@@ -68,9 +69,9 @@ export function Header() {
             <div className="relative group inline-block">
               <button className={textColor}>Pages</button>
               <div className="absolute hidden group-hover:block bg-white shadow-md rounded z-10">
-                <Link href="/tourguide" className="block px-4 py-2 hover:bg-gray-100">Tour Guide</Link>
-                <Link href="/faq" className="block px-4 py-2 hover:bg-gray-100">FAQs</Link>
-                <Link href="/gallery" className="block px-4 py-2 hover:bg-gray-100">Gallery</Link>
+                <Link href="/tourguide" className="block px-4 py-2 text-black hover:bg-gray-100">Tour Guide</Link>
+                <Link href="/faq" className="block px-4 py-2  text-black hover:bg-gray-100">FAQs</Link>
+                <Link href="/gallery" className="block px-4 py-2  text-black hover:bg-gray-100">Gallery</Link>
               </div>
             </div>
 
@@ -101,7 +102,7 @@ export function Header() {
         >
           <div className="flex justify-between items-center mb-4">
             <div className="flex flex-row">
-              <img src="/images/logo2.avif" width={200} />
+              <img src="/images/logo2.avif" width={130} />
               <img src="/images/logo1.avif" width={50} />
             </div>
 

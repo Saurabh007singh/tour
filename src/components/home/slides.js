@@ -2,57 +2,67 @@
 
 import {useEffect,useState} from "react";
 
-const banners=[
-  {id:1,image:'/images/B1.avif'},
-  {id:2,image:'/images/B2.avif'},
-  {id:3,image:'/images/B3.avif'}
-]
+const banners = [
+  { id: 1, desktop: '/images/B1.avif', mobile: '/images/B1-mobile.avif' },
+  { id: 2, desktop: '/images/B2.avif', mobile: '/images/B2-mobile.avif' },
+  { id: 3, desktop: '/images/B3.avif', mobile: '/images/B3-mobile.avif' },
+];
 
-export default function BannerCrousel(){
-  const [currentIndex,setCurrentIndex]=useState(0);
+export default function BannerCrousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(()=>{
-    const interval=setInterval(()=>{
-      setCurrentIndex(prevIndex=>prevIndex===banners.length-1 ? 0 :prevIndex+1);
-    },5000)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prevIndex =>
+        prevIndex === banners.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
 
-    return ()=>clearInterval(interval)
-  },[])
+    return () => clearInterval(interval);
+  }, []);
 
-  return(<section className="relative w-full h-[90vh] overflow-hidden">
+  return (
+    <section className="relative w-full h-[90vh] overflow-hidden">
       {/* Image slides */}
       {banners.map((banner, index) => (
         <div
           key={banner.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out  ${
-            index === currentIndex ? 'opacity-100' : 'opacity-0'
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         >
+          {/* Desktop Image */}
           <img
-            src={banner.image}
+            src={banner.desktop}
             alt={`Banner ${banner.id}`}
-            className=" object-fit  animate-zoomOut w-full h-full"
+            className="hidden md:block object-cover w-full h-full animate-zoomOut"
           />
-           <div className="absolute inset-0 bg-black/40" />
+          {/* Mobile Image */}
+          <img
+            src={banner.mobile}
+            alt={`Banner ${banner.id}`}
+            className="block md:hidden object-cover w-full h-full animate-zoomOut"
+          />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
-
-        
       ))}
 
-      {/* Overlay text (centered) */}
+      {/* Overlay text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <h1 className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg text-center">
           Welcome to Our World
         </h1>
       </div>
 
-      {/* Bottom left button */}
-      <div className="absolute bottom-6 left-6 flex flex-col md:flex-row gap-2 items-center ">
-        <button className="bg-white text-[#113A75] hover:scale-90 hover:bg-[#113A75]-background px-6 py-3 rounded font-lato shadow  transition">
+      {/* Bottom left button + text */}
+      <div className="absolute bottom-6 left-6 flex flex-col md:flex-row gap-2 items-center">
+        <button className="bg-white text-[#113A75] hover:scale-90 hover:bg-[#113A75] px-6 py-3 rounded font-lato shadow transition">
           Book A Trip
         </button>
-        <p className="font-lato text-1xl w-1/2">With years of expertise and a network of trusted partners, Let Travel offers exclusive access to hidden gems and iconic destinations alike.</p>
-
+        <p className="font-lato text-1xl md:w-1/2 w-full">
+          With years of expertise and a network of trusted partners, Let Travel
+          offers exclusive access to hidden gems and iconic destinations alike.
+        </p>
       </div>
 
       {/* Bottom right social icons */}
@@ -67,5 +77,6 @@ export default function BannerCrousel(){
           <i className="fab fa-facebook text-2xl"></i>
         </a>
       </div>
-    </section>);
+    </section>
+  );
 }
